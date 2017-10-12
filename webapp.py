@@ -11,7 +11,7 @@ def render_response():
     color = request.args['color']
     #The request object stores information about the request sent to the server.
     #args is a MultiDict (like a dictionary but can have muiltiple values for the same key)
-        reply = (color-32)*5/9
+        reply = (float(color)-32)*5/9
     return render_template('response.html', response = reply)
     
 if __name__=="__main__":
